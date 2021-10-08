@@ -25,7 +25,8 @@ Exemplos:
 
 function getRealFloor(floor) {
   if (floor <= 0) return floor;
-  return floor - (floor > 13 ? 2 : 1);
+  const factor = floor > 13 ? 2 : 1;
+  return floor - factor;
 }
 
 // Teste 1 deve retornar 0
