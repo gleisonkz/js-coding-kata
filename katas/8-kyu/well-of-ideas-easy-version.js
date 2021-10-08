@@ -13,14 +13,14 @@ Se não houver boas ideias, como costuma ser o caso, retorne 'Fail!'.
 */
 
 function well(ideas) {
-  const goodIdeas = ideas.filter((idea) => idea === "good").length;
+  const goodIdeasQuantity = ideas.filter((idea) => idea === "good").length;
   const messages = {
     0: "Fail!",
     1: "Publish!",
     2: "Publish!",
   };
 
-  return messages[goodIdeas] ?? "I smell a series!";
+  return messages[goodIdeasQuantity] ?? "I smell a series!";
 }
 
 function well(ideas) {
