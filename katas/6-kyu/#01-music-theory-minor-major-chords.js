@@ -75,9 +75,8 @@ function minorOrMajor(chord) {
 
   const firstInterval = getInterval(firstNote, secondNote);
   const secondInterval = getInterval(secondNote, thirdNote);
-  const thirdInterval = getInterval(firstNote, thirdNote);
 
-  const isTriad = chordNotes.length === 3 && thirdInterval === 7;
+  const isTriad = chordNotes.length === 3;
   const isMinor = firstInterval === 3 && secondInterval === 4 && isTriad;
   const isMajor = firstInterval === 4 && secondInterval === 3 && isTriad;
 
