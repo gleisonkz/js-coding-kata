@@ -15,25 +15,7 @@ pois 2, 4 e 6 são os múltiplos de 2 a 6.
 
 */
 
-function findMultiples(integer, limit) {
-  let primes = [];
-
-  for (let index = integer; index <= limit; index += integer) {
-    primes.push(index);
-  }
-
-  return primes;
-}
-
-function findMultiples(integer, limit) {
-  // const lengthFactor = Math.floor(limit / integer);
-  // const lengthFactor = ~~(limit / integer);
-  const lengthFactor = (limit / integer) ^ 0;
-
-  const multiples = Array(lengthFactor);
-
-  return Array.from(multiples, (_, index) => ++index * integer);
-}
+function findMultiples(integer, limit) {}
 
 {
   // Teste 1 deve retornar [5, 10, 15, 20, 25]

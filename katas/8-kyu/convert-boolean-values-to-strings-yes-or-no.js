@@ -8,17 +8,7 @@ ou uma string "Não" para falso.
 
 */
 
-function boolToWord(bool) {
-  return ["No", "Yes"][+bool];
-}
-
-function boolToWord(bool) {
-  if (bool) return "Yes";
-  return "No";
-}
-function boolToWord(bool) {
-  return (bool && "Yes") || "No";
-}
+function boolToWord(bool) {}
 
 {
   // Teste 1 deve retornar "Yes"

@@ -13,17 +13,7 @@ rps('paper','paper') // Draw!
 
 */
 
-const LOSE_FOR = {
-  rock: "paper",
-  paper: "scissors",
-  scissors: "rock",
-};
-const rps = (p1, p2) => {
-  if (p1 === p2) return "Draw!";
-  const p1LosesFor = LOSE_FOR[p1];
-  const winner = p2 === p1LosesFor ? 2 : 1;
-  return `Player ${winner} won!`;
-};
+const rps = (p1, p2) => {};
 
 {
   //Teste 1

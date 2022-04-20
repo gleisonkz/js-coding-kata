@@ -12,9 +12,7 @@ o programa pode não ser executado corretamente]
 
 */
 
-const greet = (name) => {
-  return `Hello, ${name} how are you doing today?`;
-};
+const greet = (name) => {};
 
 {
   // Teste 1 deve retornar "Hello, Ryan how are you doing today?"

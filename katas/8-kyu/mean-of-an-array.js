@@ -13,10 +13,7 @@ para o número inteiro mais próximo.
 O array nunca estará vazio.
 */
 
-function getAverage(marks) {
-  const marksSum = marks.reduce((total, mark) => (total += mark), 0);
-  return Math.floor(marksSum / marks.length);
-}
+function getAverage(marks) {}
 
 {
   // Teste 1 deve retornar 2

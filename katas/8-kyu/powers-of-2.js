@@ -24,9 +24,7 @@ porque 1 ^ 2 + 2 ^ 2 + 2 ^ 2 = 9.
 
 */
 
-function powersOfTwo(number) {
-  return Array.from(Array(number + 1), (_, index) => 2 ** index);
-}
+function powersOfTwo(number) {}
 
 {
   // Teste 1 deve retornar [1]

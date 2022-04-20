@@ -10,9 +10,7 @@ Ela acrescentou um caso especial à sua função, mas cometeu um erro.
 Você pode ajudá-la?
 */
 
-function greet(name) {
-  return name === "Johnny" ? `Hello, my love!` : `Hello, ${name}!`;
-}
+function greet(name) {}
 
 {
   // Teste 1 deve retornar Hello, Jim!

@@ -13,14 +13,7 @@ uma string que representa o estado para o qual a luz deve mudar.
 Por exemplo, updateLight('green') deve retornar 'yellow'.
 */
 
-function updateLight(currentLight) {
-  const lightsMap = {
-    green: "yellow",
-    yellow: "red",
-    red: "green",
-  };
-  return lightsMap[currentLight];
-}
+function updateLight(currentLight) {}
 
 // Teste 1 deve retornar "yellow"
 {

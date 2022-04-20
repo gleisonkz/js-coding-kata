@@ -15,10 +15,7 @@ e falso se não estiverem.
 
 */
 
-function isInLove(flower1, flower2) {
-  const isEven = (num) => num % 2 === 0;
-  return isEven(flower1) !== isEven(flower2);
-}
+function isInLove(flower1, flower2) {}
 
 {
   // Teste 1 deve retornar true

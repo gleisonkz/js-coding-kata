@@ -10,9 +10,7 @@ Se o array estiver vazio, ele deve retornar verdadeiro,
 já que tecnicamente nada falhou no teste.
 */
 
-const all = (array, predicate) => {
-  return array.every(predicate);
-};
+const all = (array, predicate) => {};
 
 {
   // Teste 1 deve retornar true

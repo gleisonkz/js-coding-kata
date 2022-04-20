@@ -23,9 +23,7 @@ retorne small, caso contrário, retorne large.
 
 */
 
-function mouthSize(animal) {
-  return animal.toLowerCase() === "alligator" ? "small" : "wide";
-}
+function mouthSize(animal) {}
 
 // Teste 1 deve retornar wide
 let sample = "toucan";

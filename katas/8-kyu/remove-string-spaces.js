@@ -5,10 +5,7 @@ Kata Nível 8 kyu - Remove String Spaces
 Simples, remova os espaços da string e retorne a string resultante.
 */
 
-const noSpace = (string) => {
-  // return string.split(' ').join('')
-  return string.replace(/\s/g, "");
-};
+const noSpace = (string) => {};
 
 {
   // Teste 1 deve retornar 8j8mBliB8gimjB8B8jlB

@@ -18,11 +18,7 @@ que representa o cubo após (da esquerda para a direita)
 0, 1 e 2 cortes terem sido feitos.
 */
 
-function countSquares(cuts) {
-  if (cuts === 0) return 1;
-  const sizes = 6;
-  return sizes * cuts ** 2 + 2;
-}
+function countSquares(cuts) {}
 
 {
   // Teste 1 deve retornar 26
@@ -47,6 +43,7 @@ function countSquares(cuts) {
   console.log(countSquares(sample));
   console.log(assert(sample, expected));
 }
+
 {
   // Teste 3 deve retornar 3176
   const sample = 23;

@@ -9,10 +9,7 @@ Se nenhuma ocorrência for encontrada, uma contagem de 0 deve ser retornada.
 
 */
 
-function strCount(str, letter) {
-  const letters = str.split("").filter((char) => char === letter);
-  return letters.length;
-}
+function strCount(str, letter) {}
 
 {
   //Teste 1

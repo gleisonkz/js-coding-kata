@@ -22,12 +22,7 @@ porem os \n deve ser adicionado entre as linhas,
 a ultima linha não deve conter \n.
 */
 
-function multiTable(number) {
-  return Array.from(
-    Array(10),
-    (_, i) => `${i + 1} * ${number} = ${(i + 1) * number}`
-  ).join("\n");
-}
+function multiTable(number) {}
 
 // Teste 1
 const expect1 =

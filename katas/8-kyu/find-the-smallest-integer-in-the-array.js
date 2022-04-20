@@ -24,18 +24,7 @@ Você pode escrever uma solução que retornará null  para [] e [x] embora?
 
 */
 
-function firstNonConsecutive(arr) {
-  for (let index = 0; index < arr.length; index++) {
-    const currentNumber = arr[index];
-    const nextNumber = arr[index + 1];
-
-    if (nextNumber === undefined) continue;
-
-    const isNonConsecutive = currentNumber + 1 !== nextNumber;
-    if (isNonConsecutive) return nextNumber;
-  }
-  return null;
-}
+function firstNonConsecutive(arr) {}
 
 {
   // Teste 1 deve retornar 6

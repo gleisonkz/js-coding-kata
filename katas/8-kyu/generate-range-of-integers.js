@@ -11,35 +11,7 @@ com a etapa passada.
 - O terceiro é a etapa.
 */
 
-function generateRange(min, max, step) {
-  let arr = [];
-
-  for (let index = min; index <= max; index += step) {
-    arr.push(index);
-  }
-
-  return arr;
-}
-
-function generateRange(min, max, step) {
-  return min > max ? [] : [min, ...generateRange(min + step, max, step)];
-}
-
-function generateRange(min, max, step) {
-  return [...rangeGenerator(min, max, step)];
-}
-
-function* rangeGenerator(min, max, step) {
-  while (min <= max) {
-    yield min;
-    min += step;
-  }
-}
-
-function generateRange(min, max, step) {
-  const length = 1 + (max - min) / step;
-  return Array.from(Array(length), (_, i) => min + i * step);
-}
+function generateRange(min, max, step) {}
 
 {
   // Teste 1 deve retornar [2, 4, 6, 8, 10]

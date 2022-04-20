@@ -10,13 +10,7 @@ Nota:
 Você não precisa se preocupar com strings com menos de dois caracteres.
 */
 
-function removeChar(str) {
-  return str.slice(1, str.length - 1);
-}
-
-function removeChar2(str) {
-  return str.replace(/^.|.$/g, "");
-}
+function removeChar(str) {}
 
 // Teste 1 deve retornar "loquen"
 {

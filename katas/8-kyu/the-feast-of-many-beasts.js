@@ -21,24 +21,7 @@ mas não aparecerão no início ou no final da string. Eles não conterão numer
 
 
 */
-function feast(beast, dish) {
-  const extractFirstAndLastChar = (arr) => [arr[0], arr.slice(-1)];
-  const [firstCharBeast, lastCharBeast] = extractFirstAndLastChar(beast);
-  const [firstCharDish, lastCharDish] = extractFirstAndLastChar(dish);
-  return firstCharBeast === firstCharDish && lastCharBeast === lastCharDish;
-}
-
-function feast(beast, dish) {
-  String.prototype.first = function () {
-    return this[0];
-  };
-
-  String.prototype.last = function () {
-    return this[this.length - 1];
-  };
-
-  return beast.first() === dish.first() && beast.last() === dish.last();
-}
+function feast(beast, dish) {}
 
 {
   // Teste 1 deve retornar true

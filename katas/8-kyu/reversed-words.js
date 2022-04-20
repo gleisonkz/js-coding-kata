@@ -11,9 +11,7 @@ Exemplo :
 
 */
 
-const reverseWords = (str) => {
-  return str.split` `.reverse().join` `;
-};
+const reverseWords = (str) => {};
 
 {
   // Teste 1 deve retornar "world! hello"

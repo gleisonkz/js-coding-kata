@@ -8,49 +8,7 @@ Dado um array de inteiros retorne um array onde:
 - Se o array de entrada estiver vazio ou nulo, retorne uma array vazio.
 */
 
-function countPositivesSumNegatives(numbers) {
-  const isFalsyOrEmpty = !numbers || !numbers.length;
-  if (isFalsyOrEmpty) return [];
-
-  const countSum = numbers.reduce(
-    ([positive, negative], number) => {
-      const isPositive = number > 0;
-      return isPositive
-        ? [++positive, negative]
-        : [positive, (negative += number)];
-    },
-    [0, 0]
-  );
-  return countSum;
-}
-
-function countPositivesSumNegatives(numbers) {
-  const isFalsyOrEmpty = !numbers || !numbers.length;
-  return isFalsyOrEmpty
-    ? []
-    : [
-        numbers.filter((number) => number > 0).length,
-        numbers.reduce((acc, item) => (item < 0 ? acc + item : acc), 0),
-      ];
-}
-
-function countPositivesSumNegatives(numbers) {
-  const isFalsyOrEmpty = !numbers || !numbers.length;
-  if (isFalsyOrEmpty) return [];
-
-  let [count, sum] = [0, 0];
-
-  for (const number of numbers) {
-    const isPositive = number > 0;
-    if (isPositive) {
-      count++;
-      continue;
-    }
-    sum += number;
-  }
-
-  return [count, sum];
-}
+function countPositivesSumNegatives(numbers) {}
 
 {
   // Teste 1 deve retornar [6, -15]
@@ -87,11 +45,10 @@ function countPositivesSumNegatives(numbers) {
 {
   // Teste 5 deve retornar [33, -2102]
   const numbers = [
-    -37, -88, -43, 48, -47, -50, -20, 33, 27, -31, -55, -58, -53, 8, -79, 87,
-    -85, 46, -78, 17, -73, -54, 85, -44, 89, 52, -76, 46, 7, 47, -38, -52, -95,
-    -17, -13, -1, 42, -64, -91, -99, 95, 67, 47, -34, -5, 99, 18, 41, 17, -71,
-    32, 19, 55, 77, -49, -92, 42, -86, 37, 63, -4, -33, 5, 21, -9, -98, 69, -54,
-    -89, -2, 77, 84, -35,
+    -37, -88, -43, 48, -47, -50, -20, 33, 27, -31, -55, -58, -53, 8, -79, 87, -85, 46, -78, 17, -73, -54, 85,
+    -44, 89, 52, -76, 46, 7, 47, -38, -52, -95, -17, -13, -1, 42, -64, -91, -99, 95, 67, 47, -34, -5, 99, 18,
+    41, 17, -71, 32, 19, 55, 77, -49, -92, 42, -86, 37, 63, -4, -33, 5, 21, -9, -98, 69, -54, -89, -2, 77, 84,
+    -35,
   ];
   const expected = [33, -2102];
   console.log(countPositivesSumNegatives(numbers));

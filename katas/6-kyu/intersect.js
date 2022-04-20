@@ -1,5 +1,7 @@
 /*
 
+Kata Nível 6 Kyu - Intersect
+
 Seu objetivo neste desafio é implementar uma função de diferença, 
 que subtrai um array da outro e retorna o resultado. 
 
@@ -15,9 +17,7 @@ intersect([1,2,2,2,3],[2]) == [1,3]
 
 */
 
-function intersect(arrayA, arrayB) {
-  return arrayA.filter((itemA) => !arrayB.includes(itemA));
-}
+function intersect(arrayA, arrayB) {}
 
 // Teste 1 deve retornar [2];
 console.log(intersect([1, 2], [1]));
@@ -42,8 +42,5 @@ console.log(intersect([1, 0, 0], [0]));
 
 // Teste 8 deve retornar [5, 14, -19, -9, 13];
 console.log(
-  intersect(
-    [5, -15, 14, -19, -16, -9, 15, -15, 20, 16, -18, 13],
-    [-15, -16, 15, 16, -15, -18, 20]
-  )
+  intersect([5, -15, 14, -19, -16, -9, 15, -15, 20, 16, -18, 13], [-15, -16, 15, 16, -15, -18, 20])
 );

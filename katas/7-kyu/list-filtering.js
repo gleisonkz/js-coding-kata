@@ -1,4 +1,5 @@
 /*
+Kata Nível 7 kyu - Alan Partridge II - Apple Turnover
 
 Filtrando Arrays
 
@@ -9,9 +10,7 @@ retorna uma novo array apenas com os inteiros.
 Exemplo: para o número 1234 deve ser retornado o número 10011010010, 
 */
 
-function filterIntegers(array) {
-  return array.filter(Number.isInteger);
-}
+function filterIntegers(array) {}
 
 // Teste 1 deve retornar [1,2];
 console.log(filterIntegers([1, 2, "a", "b"]));

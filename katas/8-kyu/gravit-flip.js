@@ -63,50 +63,7 @@ flip('L', [1, 4, 5, 3, 5])  =>  [5, 5, 4, 3, 1]
 
 */
 
-const flipOld = (direction, columns) => {
-  const columnsLength = columns.length;
-  const maxColumnCubes = Math.max(...columns);
-  const sortByDirection = (direction, arr) =>
-    direction === "R" ? arr : arr.reverse();
-  const cubesColumns = sortByDirection(direction, [...columns]);
-  let stopsCount = 0;
-  while (stopsCount !== columnsLength) {
-    for (let index = 0; index < cubesColumns.length; index++) {
-      const currentCubesColumn = cubesColumns[index];
-      const nextCubesColumn = cubesColumns[index + 1];
-      const nextColumHoles = maxColumnCubes - nextCubesColumn;
-      const canMove =
-        currentCubesColumn >= 1 &&
-        nextCubesColumn != undefined &&
-        nextCubesColumn < currentCubesColumn;
-      if (canMove) {
-        const differenceBetweenColumns = currentCubesColumn - nextCubesColumn;
-        const getCubesToMove = () => {
-          if (nextColumHoles <= currentCubesColumn) {
-            if (differenceBetweenColumns === 1) {
-              return 1;
-            }
-            return differenceBetweenColumns;
-          } else if (nextColumHoles === maxColumnCubes) {
-            return currentCubesColumn;
-          }
-          return currentCubesColumn - 1;
-        };
-        const cubesToMove = getCubesToMove();
-        cubesColumns[index] -= cubesToMove;
-        cubesColumns[index + 1] += cubesToMove;
-        continue;
-      }
-      stopsCount++;
-    }
-    if (stopsCount != columnsLength) stopsCount = 0;
-  }
-  return sortByDirection(direction, cubesColumns);
-};
-
-const flip = (direction, columns) => {
-  return columns.sort((a, b) => (direction === "R" ? a - b : b - a));
-};
+const flip = (direction, columns) => {};
 
 {
   // Teste 1 deve retornar [1, 2, 2, 3]

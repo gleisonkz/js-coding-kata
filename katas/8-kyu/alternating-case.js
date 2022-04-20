@@ -8,20 +8,7 @@ e cada letra maiúscula se torna minúscula.
 
 */
 
-String.prototype.toAlternatingCase = function () {
-  return this.split("")
-    .map((letter) => {
-      const isLowerCase = (value) => value === value.toLowerCase();
-      return isLowerCase(letter) ? letter.toUpperCase() : letter.toLowerCase();
-    })
-    .join("");
-};
-
-String.prototype.toAlternatingCase = function () {
-  return this.replace(/[A-Za-z]/g, (char) =>
-    char > "Z" ? char.toUpperCase() : char.toLowerCase()
-  );
-};
+String.prototype.toAlternatingCase = function () {};
 
 {
   // Teste 1 deve retornar "HELLO WORLD"

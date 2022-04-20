@@ -15,9 +15,7 @@ pois zeros negativos não fazem sentido matemático.
 
 */
 
-const makeNegative = (num) => {
-  return -`${num}`.replace("-", "");
-};
+const makeNegative = (num) => {};
 
 {
   // Teste 1 deve retornar -1

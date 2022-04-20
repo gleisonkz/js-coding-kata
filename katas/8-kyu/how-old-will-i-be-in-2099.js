@@ -27,30 +27,7 @@ Lembre-se de que você precisa contabilizar "ano" e "anos", dependendo do result
 Boa sorte!
 */
 
-function calculateAge(birthYear, targetYear) {
-  const diffYears = targetYear - birthYear;
-  const messageIndex = Math.sign(diffYears);
-
-  const getYears = (year) => {
-    const unsignedYear = Math.abs(year);
-    return unsignedYear > 1 ? `${unsignedYear} anos` : `${unsignedYear} ano`;
-  };
-
-  const getMessage = (years, messageIndex) => {
-    const yearsMessage = getYears(years);
-
-    const MESSAGES = {
-      "-1": `Você nascerá daqui ${yearsMessage}.`,
-      0: "Você nasceu neste mesmo ano!",
-      1: `Você tem ${yearsMessage} de idade.`,
-    };
-
-    return MESSAGES[messageIndex];
-  };
-
-  const message = getMessage(diffYears, messageIndex);
-  return message;
-}
+function calculateAge(birthYear, targetYear) {}
 
 {
   //Teste 1

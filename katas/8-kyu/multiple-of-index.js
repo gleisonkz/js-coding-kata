@@ -15,9 +15,7 @@ Alguns casos:
 
 */
 
-function multipleOfIndex(numbers) {
-  return numbers.filter((number, index) => number % index === 0);
-}
+function multipleOfIndex(numbers) {}
 
 {
   // Teste 1 deve retornar [-6, 32, 25]

@@ -23,11 +23,7 @@ Exemplos:
 
 */
 
-function getRealFloor(floor) {
-  if (floor <= 0) return floor;
-  const factor = floor > 13 ? 2 : 1;
-  return floor - factor;
-}
+function getRealFloor(floor) {}
 
 // Teste 1 deve retornar 0
 let sample = 1;

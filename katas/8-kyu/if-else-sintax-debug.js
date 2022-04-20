@@ -17,9 +17,7 @@ A função recebe um parâmetro de health (saúde)
 que sempre será um número inteiro entre -10 e 10.
 */
 
-const checkAlive = (health) => {
-  return health > 0;
-};
+const checkAlive = (health) => {};
 
 {
   // Teste 1 deve retornar true

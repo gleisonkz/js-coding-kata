@@ -7,17 +7,7 @@ e retorna "Par" para números pares ou "Ímpar" para números ímpares.
 
 */
 
-function isEvenOrOdd(number) {
-  const labels = ["Par", "Ímpar"];
-  const labels = ["Par", "Ímpar"];
-  const unsignedNumber = Math.abs(number);
-  const index = unsignedNumber % 2;
-  return labels[index];
-}
-
-function isEvenOrOdd(number) {
-  return number % 2 ? "Ímpar" : "Par";
-}
+function isEvenOrOdd(number) {}
 
 {
   // Teste 1 deve retornar "Par"

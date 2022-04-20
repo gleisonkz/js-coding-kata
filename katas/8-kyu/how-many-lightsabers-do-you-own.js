@@ -19,9 +19,7 @@ Por exemplo (entrada -> saída):
 
 */
 
-function howManyLightsabersDoYouOwn(name = "") {
-  return name === "Zach" ? 18 : 0;
-}
+function howManyLightsabersDoYouOwn(name) {}
 
 {
   // Teste 1 deve retornar 0.
@@ -44,8 +42,6 @@ function howManyLightsabersDoYouOwn(name = "") {
 }
 
 function assert(sample, expected) {
-  const result = sample
-    ? howManyLightsabersDoYouOwn(sample)
-    : howManyLightsabersDoYouOwn();
+  const result = sample ? howManyLightsabersDoYouOwn(sample) : howManyLightsabersDoYouOwn();
   return result === expected ? "OK" : "Algo deu errado";
 }

@@ -19,9 +19,7 @@ time = 11.8--> litres = 5
 
 */
 
-function litres(time) {
-  return ~~(time * 0.5);
-}
+function litres(time) {}
 
 {
   // Teste 1 deve retornar 1

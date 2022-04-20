@@ -5,25 +5,7 @@ Kata Nível 8 kyu - Find the smallest integer in the array
 Implemente a função abaixo que deve retornar o menor inteiro contigo no array.
 */
 
-function findSmallestInt(numbers) {
-  return Math.min(...numbers);
-}
-
-function findSmallestInt(numbers) {
-  return numbers.reduce((a, b) => Math.min(a, b));
-}
-
-function findSmallestInt(numbers) {
-  return Math.min.apply(null, numbers);
-}
-
-function findSmallestInt(numbers) {
-  return numbers.reduce((min, cur) => (min < cur ? min : cur));
-}
-function findSmallestInt(numbers) {
-  [min] = numbers.sort((a, b) => a - b);
-  return min;
-}
+function findSmallestInt(numbers) {}
 
 {
   // Teste 1 deve retornar 8

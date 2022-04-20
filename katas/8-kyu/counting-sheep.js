@@ -14,9 +14,7 @@ exemplo:
 Dica: não se esqueça de verificar se há valores inválidos, como null / undefined
 */
 
-function countSheeps(sheeps) {
-  return sheeps.filter(Boolean).length;
-}
+function countSheeps(sheeps) {}
 
 {
   // Teste 1 deve retornar 1

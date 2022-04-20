@@ -11,10 +11,7 @@ O valor retornado deve ser uma string e ter "***" entre cada uma de suas letras.
 Você não pode remover ou adicionar elementos do array.
 */
 
-function twoSort(string) {
-  const [first] = [...string.sort()];
-  return first.split("").join("***");
-}
+function twoSort(string) {}
 
 {
   //Teste 1 deve retornar "b***i***t***c***o***i***n"

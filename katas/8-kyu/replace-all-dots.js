@@ -8,13 +8,7 @@ na String str especificada com traços
 Nota: A string str nunca será nula.
 */
 
-const replaceDots = (str) => {
-  return str.replace(/\./g, "-");
-};
-
-const replaceDots2 = (str) => {
-  return str.split(".").join("-");
-};
+const replaceDots = (str) => {};
 
 // Teste 1 deve retornar one-two-three
 let sample = "one.two.three";

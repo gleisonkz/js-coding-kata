@@ -10,14 +10,7 @@ o mês 6 (junho), faz parte do segundo trimestre;
 e o mês 11 (novembro), faz parte do quarto trimestre.
 */
 
-function quarterOf(month) {
-  const quartes = ["", 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4];
-  return quartes[month];
-}
-
-function quarterOf2(month) {
-  return Math.ceil(month / 3);
-}
+function quarterOf(month) {}
 
 {
   // Teste 1 deve retornar 1

@@ -31,13 +31,7 @@ Dog Years (anos em cachorro)
 +5 dog years para cada ano subsequente
 */
 
-const humanYearsCatYearsDogYears = (humanYears) => {
-  const [firstYear, secondYear] = [15, 24];
-  const calcYearsGreaterThan2 = (n) => secondYear + (humanYears - 2) * n;
-  if (humanYears === 1) return [humanYears, firstYear, firstYear];
-  if (humanYears === 2) return [humanYears, secondYear, secondYear];
-  return [humanYears, calcYearsGreaterThan2(4), calcYearsGreaterThan2(5)];
-};
+const humanYearsCatYearsDogYears = (humanYears) => {};
 
 {
   // Teste 1 deve retornar [1,15,15]
