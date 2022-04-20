@@ -17,7 +17,11 @@ Saída: 1,2,3,4,5,6,7,8
 
 */
 
-function pipeFix(numbers) {}
+function pipeFix(numbers) {
+  const { 0: min, length: numbersLength, [numbersLength - 1]: max } = numbers;
+  const totalItems = max - min + 1;
+  return Array.from({ length: totalItems }, (_, index) => index + min);
+}
 
 {
   // Teste 1
