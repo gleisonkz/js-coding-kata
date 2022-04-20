@@ -66,7 +66,24 @@ namedOne.fullName // -> "Bill Smith" (sem alteração)
 Você pode alterar nossa função para criar esse objeto NamedOne?
 */
 
-function NamedOne(first, last) {}
+function NamedOne(first, last) {
+  const self = this;
+  self.firstName = first;
+  self.lastName = last;
+
+  Object.defineProperty(self, "fullName", {
+    get() {
+      return `${self.firstName} ${self.lastName}`;
+    },
+    set(value) {
+      const [firstName, LastName] = value.split(" ");
+      const isMissingFirstOrLast = !firstName || !LastName;
+      if (isMissingFirstOrLast) return;
+      self.firstName = firstName;
+      self.lastName = LastName;
+    },
+  });
+}
 
 {
   // Teste 1

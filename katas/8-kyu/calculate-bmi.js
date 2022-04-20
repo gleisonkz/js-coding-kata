@@ -12,7 +12,22 @@ se bmi> 30 retornar "Obese"
 
 */
 
-function bmi(weight, height) {}
+function bmi(weight, height) {
+  const bmi = weight / height ** 2;
+
+  const expectations = [
+    { expect: bmi <= 18.5, action: "Underweight" },
+    { expect: bmi <= 25, action: "Normal" },
+    { expect: bmi <= 30, action: "Overweight" },
+    { expect: true, action: "Obese" },
+  ];
+
+  const expectation = expectations.find(
+    (expectation) => expectation.expect
+  ).action;
+
+  return expectation;
+}
 
 {
   // Teste 1 deve retornar Underweight

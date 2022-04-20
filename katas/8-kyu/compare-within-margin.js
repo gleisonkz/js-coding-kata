@@ -30,7 +30,11 @@ closeCompare(a, b, margin) deve retornar -1.
 Isso ocorre porque a distância entre a e b é maior que 0 e a é menor que b.
 */
 
-const closeCompare = (a, b, margin) => {};
+const closeCompare = (a, b, margin = 0) => {
+  const distance = Math.abs(a - b);
+  if (margin >= distance) return 0;
+  return Math.sign(a - b);
+};
 
 {
   // Teste 1 deve retornar -1

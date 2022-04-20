@@ -10,7 +10,15 @@ que é lida da mesma forma para a frente ou para trás,
 como ana ou asa.
 */
 
-function isPalindrome(string) {}
+function isPalindrome(string) {
+  const reversed = string
+    .split("")
+    .map((char) => char.toLowerCase())
+    .reverse()
+    .join("");
+
+  return reversed === string.toLowerCase();
+}
 
 {
   // Teste 1 deve retornar true

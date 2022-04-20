@@ -11,7 +11,9 @@ porque 1 ^ 2 + 2 ^ 2 + 2 ^ 2 = 9.
 Nota: A string str nunca será nula.
 */
 
-const squareSum = (numbers) => {};
+const squareSum = (numbers) => {
+  return numbers.reduce((total, number) => (total += number ** 2), 0);
+};
 
 // Teste 1 deve retornar one-two-three
 let sample = [1, 2];

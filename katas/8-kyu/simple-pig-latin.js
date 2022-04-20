@@ -12,7 +12,24 @@ pigIt('Hello world !');     // elloHay orldway !
 
 */
 
-function pigIt(str) {}
+function pigIt(str) {
+  const words = str.split(" ");
+
+  const pigWord = (word) => {
+    const isPunctuation = /[^\w\s]/.test(word);
+    if (isPunctuation) return word;
+
+    const [firstLetter, ...restLetters] = word;
+    return `${restLetters.join("")}${firstLetter}ay`;
+  };
+
+  const piggedWords = words.map(pigWord);
+  return piggedWords.join(" ");
+}
+
+function pigIt(str) {
+  return str.replace(/(\w)(\w*)/g, "$2$1ay");
+}
 
 {
   // Teste 1

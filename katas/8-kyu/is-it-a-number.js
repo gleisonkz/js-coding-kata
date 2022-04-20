@@ -19,7 +19,13 @@ isDigit("3 5")
 isDigit("zero")
 
 */
-function isDigit(string) {}
+function isDigit(string) {
+  const stringWithoutSpace = +string.trim();
+  if (!stringWithoutSpace) return false;
+  return !isNaN(stringWithoutSpace);
+}
+
+console.log(!isNaN(+""));
 
 {
   // Teste 1 deve retornar true

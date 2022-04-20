@@ -7,7 +7,9 @@ todos os pontos de exclamação de uma determinada string.
 
 */
 
-function removeExclamationMarks(str) {}
+function removeExclamationMarks(str) {
+  return str.replace(/\!/g, "");
+}
 
 {
   // Teste 1 deve retornar Hello World

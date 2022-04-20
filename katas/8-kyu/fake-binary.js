@@ -7,7 +7,26 @@ e qualquer dígito 5 e acima por '1'.
 Retorne a string resultante.
 */
 
-function fakeBin(string) {}
+function fakeBin(string) {
+  const lessThan4 = /[0-4]/g;
+  const greaterThan4 = /[5-9]/g;
+  return string.replace(lessThan4, "0").replace(greaterThan4, "1");
+}
+
+function fakeBin(string) {
+  const toFakeBinary = (number) => (number < 5 ? 0 : 1);
+  return string.split("").map(toFakeBinary).join("");
+}
+
+function fakeBin(string) {
+  const isDigit = /\d/g;
+  const toFakeBinary = (number) => (number < 5 ? 0 : 1);
+  return string.replace(isDigit, toFakeBinary);
+}
+
+function fakeBin(x) {
+  return x.replace(/\d/g, (n) => "0000011111"[n]);
+}
 
 {
   // Teste 1 deve retornar "01011110001100111"

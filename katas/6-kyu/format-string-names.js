@@ -1,6 +1,6 @@
 /*
 
-Kata Nível 6 kyu - Formate uma sequência de nomes como 'Bart, Lisa e Maggie'.
+Desafio 6 kyu - Formate uma sequência de nomes como 'Bart, Lisa e Maggie'.
 
 Escreva uma função que retorne uma string formatada como uma lista
 de nomes separados por vírgula, exceto para os dois últimos nomes, 
@@ -17,7 +17,12 @@ Exemplo3: para os nomes 'Bart', a função deve retornar
 
 */
 
-function listNames(names) {}
+function listNames(names) {
+  return names
+    .map((c) => c.name)
+    .join(", ")
+    .replace(/,\s([^,]+)$/, " & $1");
+}
 
 /* Regex
  ,\s seleciona a virgula + um espaço em branco
@@ -33,8 +38,13 @@ function listNames(names) {}
 */
 
 // Teste 1 deve retornar 'Bart, Lisa & Maggie';
-console.log(listNames([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }]));
-console.log(listNames([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }]) === "Bart, Lisa & Maggie");
+console.log(
+  listNames([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }])
+);
+console.log(
+  listNames([{ name: "Bart" }, { name: "Lisa" }, { name: "Maggie" }]) ===
+    "Bart, Lisa & Maggie"
+);
 
 // Teste 2 deve retornar 'Bart & Lisa';
 console.log(listNames([{ name: "Bart" }, { name: "Lisa" }]));

@@ -9,7 +9,13 @@ exemplo:
 nameShuffler('john McClane'); => "McClane john"
 */
 
-function nameShuffler(str) {}
+function nameShuffler(str) {
+  return str.split(" ").reverse().join(" ");
+}
+
+function nameShuffler(str) {
+  return str.replace(/^(.*) (.*)$/, "$2 $1");
+}
 
 {
   // Teste 1 deve retornar "McClane john"

@@ -60,7 +60,23 @@ otherOne.fullName // -> "Don Jones"
 Você pode alterar nossa função para conter esse comportamento?
 */
 
-function OnceNamedOne(first, last) {}
+function OnceNamedOne(first, last) {
+  const self = this;
+
+  Object.defineProperty(self, "fullName", {
+    get() {
+      return `${self.firstName} ${self.lastName}`;
+    },
+  });
+  Object.defineProperty(self, "firstName", {
+    value: first,
+    writable: false,
+  });
+  Object.defineProperty(self, "lastName", {
+    value: last,
+    writable: false,
+  });
+}
 
 {
   // Teste 1

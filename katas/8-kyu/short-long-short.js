@@ -8,7 +8,11 @@ As strings não terão o mesmo comprimento, mas podem estar vazias.
 
 */
 
-function shortLongShort(a, b) {}
+function shortLongShort(a, b) {
+  const getShorterLonger = (a, b) => (a.length > b.length ? [b, a] : [a, b]);
+  const [shorter, longer] = getShorterLonger(a, b);
+  return `${shorter}${longer}${shorter}`;
+}
 
 {
   //Teste 1

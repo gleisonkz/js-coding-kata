@@ -9,7 +9,28 @@ Nota: Apenas entradas válidas serão fornecidas.
 
 */
 
-function booleanToString(bool) {}
+function booleanToString(bool) {
+  return `${bool}`;
+}
+function booleanToString(bool) {
+  return bool.toString();
+}
+function booleanToString(bool) {
+  return bool + "";
+}
+function booleanToString(bool) {
+  return String(bool);
+}
+function booleanToString(bool) {
+  return Boolean.prototype.toString.apply(bool);
+}
+function booleanToString(bool) {
+  return bool ? "true" : "false";
+}
+function booleanToString(bool) {
+  if (bool) return "true";
+  return "false";
+}
 
 {
   // Teste 1 deve retornar "true"

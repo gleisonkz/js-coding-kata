@@ -22,7 +22,24 @@ Código | Letra
 
 */
 
-function isVow(codes) {}
+function isVow(codes) {
+  const vowels = {
+    97: "a",
+    101: "e",
+    105: "i",
+    111: "o",
+    117: "u",
+  };
+  return codes.map((code) => vowels[code] ?? code);
+}
+
+function isVow(codes) {
+  const vowels = new Set("aeiou");
+  return codes.map((code) => {
+    const codeAsString = String.fromCharCode(code);
+    return vowels.has(codeAsString) ? codeAsString : code;
+  });
+}
 
 {
   // Teste 1 deve retornar [118, "u", 120, 121, "u", 98, 122, "a", 120, 106, 104, 116]

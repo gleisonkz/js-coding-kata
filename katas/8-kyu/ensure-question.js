@@ -8,7 +8,18 @@ caso contrário retorne a retorna a string original.
 
 */
 
-function ensureQuestion(string) {}
+function ensureQuestion(string) {
+  const hasQuestionMark = string.endsWith("?");
+  return hasQuestionMark ? string : `${string}?`;
+}
+
+function ensureQuestion(string) {
+  const hasQuestionMark = string[-1] === "?";
+  return hasQuestionMark ? string : `${string}?`;
+}
+function ensureQuestion(string) {
+  return /\?$/.test(string) ? string : `${string}?`;
+}
 
 {
   // Teste 1 deve retornar "?"

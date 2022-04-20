@@ -15,7 +15,20 @@ O mesmo vale para todos os outros arrays que você obterá nos testes:
 você deve alterar as posições dos elementos com a mesma lógica.
 */
 
-function fixTheMeerkat(arr) {}
+function fixTheMeerkat([tail, body, head]) {
+  return [head, body, tail];
+}
+
+function fixTheMeerkat(arr) {
+  const end = arr.shift();
+  const begin = arr.pop();
+  arr.push(end);
+  arr.unshift(begin);
+  return arr;
+}
+function fixTheMeerkat(arr) {
+  return [arr[2], arr[1], arr[0]];
+}
 
 {
   // Teste 1 deve retornar ["head", "body", "tail"]

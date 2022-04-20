@@ -14,7 +14,12 @@ caso contrário, é um retângulo.
 
 */
 
-function areaOrPerimeter(length, width) {}
+function areaOrPerimeter(length, width) {
+  const calcSquareArea = () => length * width;
+  const calcRectArea = () => length * 2 + width * 2;
+  const isSquare = length === width;
+  return isSquare ? calcSquareArea() : calcRectArea();
+}
 
 {
   // Teste 1 deve retornar 16.

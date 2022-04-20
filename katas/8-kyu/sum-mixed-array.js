@@ -7,7 +7,26 @@ retorne a soma dos valores do array como se todos fossem números.
 Retorne sua resposta como um number.
 */
 
-function sumMix(numbers) {}
+function sumMix(numbers) {
+  return numbers.reduce((total, number) => total + +number, 0);
+}
+
+function sumMix(numbers) {
+  return numbers.map(Number).reduce((total, number) => total + number);
+}
+
+function sumMix(numbers) {
+  let sum = 0;
+  for (i = 0; i < numbers.length; i++) {
+    const number = numbers[i];
+    sum += +number;
+  }
+  return sum;
+}
+
+function sumMix(numbers) {
+  return eval(numbers.join("+"));
+}
 
 {
   // Teste 1 deve retornar 22

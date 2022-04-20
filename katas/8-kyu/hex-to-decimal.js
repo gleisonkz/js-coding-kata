@@ -6,7 +6,9 @@ Implemente a função abaixo que deve converter um valor em hexadecimal
 para decimal. 
 */
 
-function hexToDec(hexString) {}
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
 
 {
   // Teste 1 deve retornar 1
