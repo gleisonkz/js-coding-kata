@@ -9,17 +9,7 @@ porque usa todas as letras de A-Z pelo menos uma vez (maiúsculas e minúsculas 
 
 */
 
-function isPangram(sentence) {
-  const lowerCaseCharacters = [...sentence]
-    .map((letter) =>
-      letter
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036F]/g, "")
-    )
-    .join("");
-  return new Set(lowerCaseCharacters.match(/[a-z]/g)).size === 26;
-}
+function isPangram(sentence) {}
 
 // Teste 1 deve retornar true
 let sample = "The quick brown fox jumps over the lazy dog";

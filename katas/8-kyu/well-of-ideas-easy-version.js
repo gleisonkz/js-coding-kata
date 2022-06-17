@@ -23,19 +23,6 @@ function well(ideas) {
   return messages[goodIdeasQuantity] ?? "I smell a series!";
 }
 
-function well(ideas) {
-  const goodIdeas = ideas.filter((idea) => idea === "good").length;
-  switch (goodIdeas) {
-    case 0:
-      return "Fail!";
-    case 1:
-    case 2:
-      return "Publish!";
-    default:
-      return "I smell a series!";
-  }
-}
-
 {
   // Teste 1 deve retornar Fail!
   const sample = ["bad", "bad", "bad"];

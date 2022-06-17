@@ -15,30 +15,7 @@ Ex:
 
 */
 
-function dashatize(target) {
-  const idOdd = (num) => num & 1;
-
-  return [...String(target)]
-    .reduce((acc, cur) => (idOdd(cur) ? `${acc}-${cur}-` : `${acc}${cur}`), "")
-    .replace(/--/g, "-")
-    .replace(/(^-|-$)/g, "");
-}
-
-// function dashatize(target) {
-//   return [...String(target)]
-//     .filter((c) => c != "-")
-//     .map((item, index, array) =>
-//       index > 0 && (item & 1 || array[index - 1] & 1) ? "-" + item : item
-//     )
-//     .join("");
-// }
-
-// function dashatize(num) {
-//   return String(num)
-//     .replace(/([13579])/g, "-$1-")
-//     .replace(/--+/g, "-")
-//     .replace(/(^-|-$)/g, "");
-// }
+function dashatize(target) {}
 
 // Teste 1 deve retornar "2-7-4";
 console.log(dashatize(274));

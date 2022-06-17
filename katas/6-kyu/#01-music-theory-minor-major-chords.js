@@ -45,44 +45,7 @@ Saída: Mensagem de string: 'Minor', 'Major' ou 'Not a chord'.
 
 */
 
-function minorOrMajor(chord) {
-  const getInterval = (note1, note2) => {
-    const note1Index = notes.findIndex((note) => note.includes(note1));
-    const note2Index = notes.findIndex((note) => note.includes(note2));
-    const interval = note2Index - note1Index;
-    const isNegative = interval < 0;
-    if (isNegative) return 12 + interval;
-    return interval;
-  };
-
-  const notes = [
-    "C",
-    ["C#", "Db"],
-    "D",
-    ["D#", "Eb"],
-    "E",
-    "F",
-    ["F#", "Gb"],
-    "G",
-    ["G#", "Ab"],
-    "A",
-    ["A#", "Bb"],
-    "B",
-  ];
-
-  const chordNotes = chord.split(" ");
-  const [firstNote, secondNote, thirdNote] = chordNotes;
-
-  const firstInterval = getInterval(firstNote, secondNote);
-  const secondInterval = getInterval(secondNote, thirdNote);
-
-  const isTriad = chordNotes.length === 3;
-  const isMinor = firstInterval === 3 && secondInterval === 4 && isTriad;
-  const isMajor = firstInterval === 4 && secondInterval === 3 && isTriad;
-
-  if (isMinor) return "Minor";
-  return isMajor ? "Major" : "Not a chord";
-}
+function minorOrMajor(chord) {}
 
 {
   // Teste 1

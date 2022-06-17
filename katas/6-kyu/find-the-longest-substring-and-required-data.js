@@ -35,19 +35,7 @@ o mostrado acima quando receber uma string enorme.
 
 */
 
-function findLongestSubstr(string) {
-  const pattern = /([a-zA-Z0-9])\1+/g;
-  const matches = string.match(pattern);
-  const longestMatch = matches.reduce((acc, curr) => {
-    return curr.length > acc.length ? curr : acc;
-  });
-
-  const beginIndex = string.indexOf(longestMatch);
-  const endIndex = beginIndex + longestMatch.length - 1;
-  const longestMatchCode = string.charCodeAt(beginIndex).toString();
-
-  return [longestMatchCode, longestMatch.length, [beginIndex, endIndex]];
-}
+function findLongestSubstr(string) {}
 
 {
   // Teste 1

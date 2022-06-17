@@ -30,12 +30,7 @@
     Saída: array de strings que foram prefixadas com a hashtag, mas não contêm a hashtag.
 */
 
-function getHashtags(post) {
-  return post
-    .split(" ")
-    .filter((word) => /(^#+[a-z]+$)/gi.test(word))
-    .map((word) => word.replace(/#/g, ""));
-}
+function getHashtags(post) {}
 
 {
   //Teste 1

@@ -26,38 +26,7 @@
     Portanto, este caso de teste deve retornar 6 ;-)
 */
 
-function trapWater(heights) {
-  let waterCount = 0;
-  let maxLeftHeight = 0;
-  let maxRightHeight = 0;
-  let leftIndex = 0;
-  let rightIndex = heights.length - 1;
-
-  const updateMaxLeftHeight = (currentLeftHeight) => {
-    maxLeftHeight = Math.max(maxLeftHeight, currentLeftHeight);
-    waterCount += maxLeftHeight - currentLeftHeight;
-    leftIndex++;
-  };
-
-  const updateMaxRightHeight = (currentRightHeight) => {
-    maxRightHeight = Math.max(maxRightHeight, currentRightHeight);
-    waterCount += maxRightHeight - currentRightHeight;
-    rightIndex--;
-  };
-
-  while (leftIndex < rightIndex) {
-    const currentLeftHeight = heights[leftIndex];
-    const currentRightHeight = heights[rightIndex];
-
-    if (currentLeftHeight <= currentRightHeight) {
-      updateMaxLeftHeight(currentLeftHeight);
-      continue;
-    }
-    updateMaxRightHeight(currentRightHeight);
-  }
-
-  return waterCount;
-}
+function trapWater(heights) {}
 
 {
   //Teste 1

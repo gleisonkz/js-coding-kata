@@ -9,17 +9,7 @@ portanto, a função deve retornar 5 neste caso
 
 */
 
-function countBits(num) {
-  const integerToBinary = (num) => num.toString(2);
-  const binaryString = integerToBinary(num);
-  return binaryString.split("").filter((c) => c == 1).length;
-}
-
-function countBitsV2(num) {
-  const integerToBinary = (num) => num.toString(2);
-  const binaryString = integerToBinary(num);
-  return binaryString.split("0").join("").length;
-}
+function countBits(num) {}
 
 // Teste 1 deve retornar 0;
 console.log(countBits(0));
