@@ -12,7 +12,7 @@ Saída: 1,2,3,4,5,6,7,8
 */
 
 function buildString(...template) {
-  return `I like #{template.join(',')}!`;
+  return `I like ${template.join(", ")}!`;
 }
 
 {
