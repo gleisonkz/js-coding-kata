@@ -15,13 +15,8 @@ Examples (Input -> Output)
 Você pode considerar que não haverá matrizes/vetores vazios.
 */
 
-const min = function (list) {
-  return list[0];
-};
-
-const max = function (list) {
-  return list[0];
-};
+const min = (list) => list.reduce((a, b) => Math.min(a, b));
+const max = (list) => list.reduce((a, b) => Math.max(a, b));
 
 {
   const samples = [-52, 56, 30, 29, -54, 0, -110];
